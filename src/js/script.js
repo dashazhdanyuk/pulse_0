@@ -74,4 +74,27 @@ $(document).ready(function(){
     valideForms('#consultation-form');
     valideForms('#consultation form');
     valideForms('#order form');
+
+    $('input[name="phone"]').mask("+7(999) 999-9999");
+
+    $('form').submit(function(e) {
+        e.preventDefault(); /* отключили стандартное поведение браузера (перезагрузка страницы) */
+
+        if(!$(this).valid()){
+            return;
+        }
+
+        $.ajax({
+            type:"POST", /* POST - отдать данные */
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+            $('#consultation,#order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        }); /* отправка данных на сервер с помощью метода, который есть внутри jquery */
+        return false;
+    });
   });

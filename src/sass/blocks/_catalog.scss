@@ -57,7 +57,7 @@
             position: absolute;
             bottom: 0;
             left: 50%;
-            transform: translateX(calc(-50% - 19px));
+            transform: translateX(calc(-50%));
             font-weight: 500;
             font-size: 14px;
             display: block;
@@ -141,16 +141,14 @@
         &__list{
             position: relative;
             width: 50%;
-            margin-left: 20px;
+            margin-left: -10px;
             transform: translateX(0%);
-            padding-right: 20px;
+            padding-right: 14px;
             transition: 0.5s all;
-            padding-left: 19px;
             margin-bottom: 0;
             list-style-type: none;
             &_active{
                 transform: translateX(-100%);
-                margin-left: 0px;
             }
             li{
                 position: relative;
@@ -162,11 +160,11 @@
                 &:before{
                     content: ''; /* у всех псевдоэлементов пишем контент */
                     position: absolute;
-                    width: 5px;
-                    height: 5px;
+                    width: 6px;
+                    height: 6px;
                     background-color: $main-color;
-                    left: -14px;
-                    top: 7px;
+                    left: -16px;
+                    top: 8px;
                 }
             }
         }

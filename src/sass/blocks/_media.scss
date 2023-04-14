@@ -158,3 +158,80 @@
         }
     }
 }
+
+@media screen and (max-width:575px){
+    .header{
+        &__phone{
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        &__logo{
+            padding: 0 20px;
+            margin-left: 0;
+        }
+    }
+    .promo{
+        &__header{
+            text-align: center;
+            font-size: 25px;
+        }
+        &__subheader{
+            text-align: center;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        &__icons{
+            width: 360px;
+        }
+    }
+    .consultation{
+        .title{
+            &_left{
+                font-size: 15px;
+                line-height: 31px;
+            }
+        }
+        &__descr{
+            font-size: 16px;
+        }
+    }
+    .catalog{
+        .title{
+            font-size: 20px;
+        }
+        &__tabs{
+            margin-top: 35px;
+        }
+    }
+    .review{
+        min-height: 1500px;
+        .title{
+            &_review{
+                padding-bottom: 0;
+            }
+        }
+        &__wrapper{
+            margin-top: 100px;
+        }
+        &__img{
+            display: block;
+            margin: 0 auto;
+        }
+        &__img{
+            margin: 0 auto;
+        }
+        &__wrapper{
+            &__descr{
+                top: 121px;
+                text-align: center;
+                left: 0;
+            }  
+        } 
+    
+    }
+    .footer{
+        &__info{
+            width: 372px;
+        }
+    }
+}
